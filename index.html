@@ -7,14 +7,83 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="card">
-      <h1>Перекладач 🇺🇦-🇬🇧</h1>
-      <textarea
-        id="input"
-        placeholder="Введіть текст українською..."
-      ></textarea>
-      <button id="translateBtn">Перекласти</button>
-      <div id="output"></div>
+    <div class="container">
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+      
+      <div class="card">
+        <div class="header">
+          <h1>Універсальний Перекладач</h1>
+          <p class="subtitle">Перекладайте текст на будь-яку мову</p>
+        </div>
+
+        <div class="language-selector">
+          <div class="language-group">
+            <label for="fromLang">З мови:</label>
+            <select id="fromLang">
+              <option value="uk">🇺🇦 Українська</option>
+              <option value="en">🇬🇧 Англійська</option>
+              <option value="de">🇩🇪 Німецька</option>
+              <option value="fr">🇫🇷 Французька</option>
+              <option value="es">🇪🇸 Іспанська</option>
+              <option value="it">🇮🇹 Італійська</option>
+              <option value="pt">🇵🇹 Португальська</option>
+              <option value="ru">🇷🇺 Російська</option>
+              <option value="ja">🇯🇵 Японська</option>
+              <option value="zh">🇨🇳 Китайська</option>
+              <option value="ko">🇰🇷 Корейська</option>
+              <option value="ar">🇸🇦 Арабська</option>
+              <option value="hi">🇮🇳 Гінді</option>
+              <option value="tr">🇹🇷 Турецька</option>
+              <option value="pl">🇵🇱 Польська</option>
+              <option value="nl">🇳🇱 Нідерландська</option>
+              <option value="sv">🇸🇪 Шведська</option>
+              <option value="da">🇩🇰 Данська</option>
+            </select>
+          </div>
+
+          <button id="swapLang" class="swap-btn">⇄</button>
+
+          <div class="language-group">
+            <label for="toLang">На мову:</label>
+            <select id="toLang">
+              <option value="en">🇬🇧 Англійська</option>
+              <option value="uk">🇺🇦 Українська</option>
+              <option value="de">🇩🇪 Німецька</option>
+              <option value="fr">🇫🇷 Французька</option>
+              <option value="es">🇪🇸 Іспанська</option>
+              <option value="it">🇮🇹 Італійська</option>
+              <option value="pt">🇵🇹 Португальська</option>
+              <option value="ru">🇷🇺 Російська</option>
+              <option value="ja">🇯🇵 Японська</option>
+              <option value="zh">🇨🇳 Китайська</option>
+              <option value="ko">🇰🇷 Корейська</option>
+              <option value="ar">🇸🇦 Арабська</option>
+              <option value="hi">🇮🇳 Гінді</option>
+              <option value="tr">🇹🇷 Турецька</option>
+              <option value="pl">🇵🇱 Польська</option>
+              <option value="nl">🇳🇱 Нідерландська</option>
+              <option value="sv">🇸🇪 Шведська</option>
+              <option value="da">🇩🇰 Данська</option>
+            </select>
+          </div>
+        </div>
+
+        <textarea
+          id="input"
+          placeholder="Введіть текст для перекладу..."
+          class="input-area"
+        ></textarea>
+
+        <button id="translateBtn" class="translate-btn">
+          <span>Перекласти</span>
+        </button>
+
+        <div id="output" class="output-area"></div>
+
+        <button id="copyBtn" class="copy-btn" style="display: none;">
+          Копіювати
+        </button>
+      </div>
     </div>
 
     <script src="script.js" defer></script>
